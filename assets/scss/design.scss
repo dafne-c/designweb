@@ -11,13 +11,21 @@ $button: #3F8E00;
 $branca: #FFFFFF;
 
 header{
+
     background-color: $header;
-    nav{
-        a{
-            color: $branca;
-            font-family: $font-texto;
+    font-family: $font-texto;
+    
+    ul{
+
+        gap: 20px;
+
+        li{
+            a{
+                color: $branca;
+            }
         }
     }
+
 }
 
 body{
@@ -68,6 +76,11 @@ body{
             border: 1px solid #62BA1B;
             box-shadow: 0 8px 30px 0 rgba(63, 142, 0, 0.50);
             max-width: 367px;
+            padding: 21px 64px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            display: flex;
         }
     }
 }
@@ -91,4 +104,39 @@ body{
             border: 1px solid #1B1B1B;
         }
     }
+    
+}
+
+@media (max-width: 1100px){
+    .curriculo{
+        .left{
+            .text-and-button{
+                p{
+                    font-size: 12px;
+                }
+            }
+            button{
+                width: 100%;
+                max-width: 800px;
+            }
+        }
+
+
+    }
+}
+
+@media (max-width: 710px){
+
+    .curriculo{
+
+        .left{
+            
+            button{
+                max-width: 100%;
+            }
+
+        }
+
+    }
+
 }
