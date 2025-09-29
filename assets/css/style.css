@@ -1,5 +1,68 @@
 /** Fontes **/
 /** Cores **/
+header {
+  background-color: #1B1B1B;
+}
+header nav a {
+  color: #FFFFFF;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+body {
+  background-color: #080808;
+}
+
+.curriculo .left h1, .curriculo .left h3, .curriculo .left p, .curriculo .left button {
+  color: #FFFFFF;
+}
+.curriculo .left h1, .curriculo .left h3 {
+  font-family: "Raleway", sans-serif;
+}
+.curriculo .left p, .curriculo .left button {
+  font-family: "IBM Plex Mono", monospace;
+}
+.curriculo .left h1 {
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.curriculo .left h3 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+}
+.curriculo .left p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+}
+.curriculo .left button {
+  background-color: #3F8E00;
+  border-radius: 4px;
+  border: 1px solid #62BA1B;
+  box-shadow: 0 8px 30px 0 rgba(63, 142, 0, 0.5);
+  max-width: 367px;
+}
+
+.last-jobs {
+  gap: 20px;
+}
+.last-jobs h5 {
+  color: #FFFFFF;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.last-jobs ul li {
+  border-radius: 6px;
+  border: 1px solid #1B1B1B;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,22 +81,70 @@
   justify-content: space-between;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .items-center {
   align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 header {
   width: 1100px;
   padding: 28px 100px;
+  margin: auto;
+  margin-bottom: 90px;
 }
 
-nav {
+nav ul {
+  gap: 32px;
+}
+
+.curriculo {
+  gap: 32px;
+  margin-bottom: 71px;
+}
+.curriculo .left {
+  flex-direction: column;
+  gap: 30px;
+  max-width: 567px;
+}
+.curriculo .left button {
+  display: flex;
+  padding: 21px 64px;
+  align-items: center;
+  gap: 10px;
+}
+.curriculo .right img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+.curriculo .text-top {
+  gap: 10px;
+}
+.curriculo .text-and-button {
+  gap: 30px;
+}
+
+.last-jobs {
   flex-direction: column;
 }
-
-ul {
-  flex-direction: row;
-  gap: 32px;
+.last-jobs .worked-on {
+  align-items: flex-start;
+  gap: 30px;
+}
+.last-jobs ul {
+  gap: 30px;
+}
+.last-jobs ul li {
+  width: 160px;
+  height: 60px;
+  flex-shrink: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

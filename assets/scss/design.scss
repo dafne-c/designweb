@@ -5,7 +5,90 @@ $font-texto: "IBM Plex Mono", monospace;
 
 /** Cores **/
 
-$cor-header: #1B1B1B;
-$cor-bg-body: #080808;
-$cor-button: #3F8E00;
-$cor-branca: #FFFFFF;
+$header: #1B1B1B;
+$body: #080808;
+$button: #3F8E00;
+$branca: #FFFFFF;
+
+header{
+    background-color: $header;
+    nav{
+        a{
+            color: $branca;
+            font-family: $font-texto;
+        }
+    }
+}
+
+body{
+    background-color: $body;
+}
+
+.curriculo{
+
+
+    .left{
+        h1, h3, p, button{
+            color: $branca;
+        }
+
+        h1, h3{
+            font-family: $font-titulo;
+        }
+
+        p, button{
+            font-family: $font-texto;
+        }
+
+        h1{
+            font-size: 44px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+        }
+
+        h3{
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 200;
+            line-height: normal;
+        }
+
+        p{
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 22.4px */
+    
+        }
+
+        button{
+            background-color: $button;
+            border-radius: 4px;
+            border: 1px solid #62BA1B;
+            box-shadow: 0 8px 30px 0 rgba(63, 142, 0, 0.50);
+            max-width: 367px;
+        }
+    }
+}
+
+.last-jobs{
+
+    gap: 20px;
+
+    h5{
+        color: $branca;
+        font-family: $font-texto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    ul{
+        li{
+            border-radius: 6px;
+            border: 1px solid #1B1B1B;
+        }
+    }
+}
