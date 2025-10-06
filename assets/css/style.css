@@ -5,6 +5,9 @@ header {
   background-color: #1B1B1B;
   font-family: "IBM Plex Mono", monospace;
 }
+header #botao {
+  display: none;
+}
 header ul {
   gap: 20px;
 }
