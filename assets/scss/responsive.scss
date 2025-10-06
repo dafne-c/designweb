@@ -1,0 +1,104 @@
+@media (max-width: 710px){
+
+    .header{
+        button{
+            background: none;
+            color: #fff;
+            gap: 10px;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        margin: 10px 16px;
+        flex-direction: row-reverse;
+
+        .navigate{
+
+                li{
+                    display: none;
+                }
+
+            }
+        }
+
+    .curriculo{
+
+        flex-direction: column-reverse;
+        margin: 0px 16px;
+
+        .left{
+            button{
+                margin-top: 50px;
+            }
+        }
+
+        .text-and-button{
+            align-items: left;
+            text-align: left;
+
+            .text-top{
+                align-items: left;
+            }
+        }
+
+    }
+
+
+
+}
+
+
+/* media query para o tablet. foi o código da primeira atividade, então não me preocupei em limpá-lo :p */
+
+@media (max-width: 1100px){
+
+    header{
+        padding: 28px 24px;
+        margin: 10px 48px;
+        margin-bottom: 90px;
+    }
+
+    .curriculo{
+        padding: 28px 24px;
+        margin: 10px 48px;
+        .right{
+            img{
+                max-width: 250px;
+                max-height: 250px;
+            }
+        }
+
+        .left{
+            button{
+                span{
+                    font-size: 14px;
+                }
+            }
+        }
+        
+    }
+
+    .last-jobs{
+        margin: 0px 48px;
+    }
+
+
+
+}
+
+@media (max-width: 1100px){
+    .curriculo{
+        .left{
+            .text-and-button{
+                p{
+                    font-size: 12px;
+                }
+            }
+            button{
+                width: 100%;
+                max-width: 800px;
+            }
+        }
+
+
+    }
+}
