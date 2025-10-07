@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio - Tailwind CSS </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-pink-50 p-10 font-[Rubik]">
+
+    <!-- TÍTULO
+        TAMANHO 4 * REFERENCIA
+        PESO 400
+        COR CINZA 700
+        MARGIN BOTTOM 4
+    -->
+    <h1 class="text-4xl font-[500] text-gray-700 mb-2"> Título Rubik </h1>
+
+    <!-- PARÁGRAFO 
+        MARGIN TOP 4
+        TEXTO CINZA 700
+        FONTE PESO 300
+    -->
+    <p class="mb-7 text-gray-700 font-[300]"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam eos beatae deleniti accusantium? Tempora, perferendis pariatur. Incidunt, aliquam! Enim dolorem doloribus cupiditate ipsa ipsam optio maxime tempore provident aliquam doloremque. </p>
+
+    <!-- SECTION 
+        FUNDO ZINCO
+        PADDING 5 * REFERENCIA
+        SOMBREADO
+    -->
+    <section class="bg-zinc-50 p-5 rounded shadow">
+
+        <!-- texto cinza -->
+        <p class="text-gray-700 text-2xl font-[200]"> Hello, world! </p>
+
+    </section>
+
+    <!-- 
+
+        flexbox     -> .flex
+        grid        -> .grid
+        justify-*   -> alinhamento horizontal
+        items-*     -> alinhamento vertical
+        gap-*       -> controle de espaçamento entre os items
+
+    -->
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+        <div class="bg-pink-100 text-pink-700 p-4 rounded"> DESIGN </div>
+        <div class="bg-pink-200 text-pink-400 p-4 rounded"> DESENVOLVIMENTO </div>
+        <div class="bg-pink-300 text-blue-50 p-4 rounded"> CONSULTORIA </div>
+    </section>
+
+</body>
+</html>
