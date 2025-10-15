@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/f3e3dffc8c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-black">
+    <header class="mb-12 md:mt-2 md:rounded-sm">
+        <nav class="flex justify-between bg-neutral-800 text-zinc-400 max-w-110 px-6 py-7 items-center md:max-w-300 md:m-auto">
+
+            <div class="hidden sm:flex">
+                <ul class="md:flex md:gap-10 font-[IBM_Plex_Mono] text-xs">
+                    <li>
+                        <a href="#"> Estudos de Casos </a>
+                    </li>
+                    <li>
+                        <a href="#"> Trabalhos </a>
+                    </li>
+                    <li>
+                        <a href="#"> Entre em contato </a>
+                    </li>
+                </ul>
+            </div> 
+
+            <div class="flex gap-6">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-behance"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+
+            <div class="flex gap-4 items-center justify-center md:hidden">
+                <i class="fa-solid fa-bars"></i>
+                <p class="font-[IBM_Plex_Mono]">
+                    Menu
+                </p>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main class="px-6">
+
+        <section class="flex flex-col-reverse items-center gap-10 md:flex-row md:justify-center md:gap-90">
+            <div class="text-white max-w-100 md:max-w-120">
+
+                <div class="font-[Raleway] md:mt-10">
+                    <h1 class="font-black text-4xl mb-1 md:text-4xl">Dafne Lima</h1>
+                    <h3 class="font-light mb-6">UI/UX e front-end</h3>
+                </div>
+
+                <p class="mb-10 font-[IBM_Plex_Mono] font-light">
+                    Sou uma designer UX/UI com Figma e aprendiz de front-end. Adoro trabalhar em grupo e amo conhecer novas pessoas que amam design como eu. Me considero uma boa líder e sei que posso levar seu projeto ao sucesso ;)
+                </p>
+
+                <button class="flex gap-2max-w-100 font-bold bg-lime-700 rounded-[4px] border border-[#62BA1B] bg-[#3F8E00] shadow-[0_8px_30px_0_rgba(63,142,0,0.5)] py-5 px-21 mb-16">
+                    Vamos trabalhar juntos
+                    >
+                </button>
+            </div>
+
+            <figure class="max-w-87">
+                <img
+                src="./img/foto-pessoal.jpg"
+                alt=""
+                class="rounded-full">
+            </figure>
+        </section>
+        
+        <section class="flex w-full m-auto md:items-center flex-col">
+            <h4 class="font-[IBM_Plex_Mono] text-white mb-3 md:mr-267">
+                Trabalhou em:
+            </h4>
+            <div class="flex gap-7 md:gap-25 overflow-x-auto overflow-y-hidden mb-10 pb-4">
+
+                <button class="flex-shrink-0 w-40 h-16 px-4 py-3 rounded-lg border border-white md:w-40 md:h-13"> 
+                    <img src="./img/clientes/clickup logo 1.svg"
+                    alt="ClickUp"
+                    class="w-full h-full object-contain"> 
+                </button>
+
+                <button class="flex-shrink-0 w-40 h-16 px-4 py-3 rounded-lg border border-white md:w-40 md:h-13"> 
+                    <img src="./img/clientes/dropbox_blue 1.svg"
+                    alt="Dropbox"
+                    class="w-full h-full object-contain"> 
+                </button>
+
+                <button class="flex-shrink-0 w-40 h-16 px-4 py-3 rounded-lg border border-white md:w-40 md:h-13"> 
+                    <img src="./img/clientes/Paychex logo.svg"
+                    alt="Paychex"
+                    class="w-full h-full object-contain"> 
+                </button>
+
+                <button class="flex-shrink-0 w-40 h-16 px-4 py-3 rounded-lg border border-white md:w-40 md:h-13"> 
+                    <img src="./img/clientes/Elastic logo 1.svg"
+                    alt="Elastic"
+                    class="w-full h-full object-contain"> 
+                </button>
+                
+                <button class="flex-shrink-0 w-40 h-16 px-4 py-3 rounded-lg border border-white md:w-40 md:h-13"> 
+                    <img src="./img/clientes/Stripe logo.svg"
+                    alt="Stripe"
+                    class="w-full h-full object-contain"> 
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+  </body>
+</html>
