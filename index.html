@@ -4,19 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title> Landing Page - Versão 1.0 </title>
   </head>
-  <body>
+  <body class="font-[Inter]">
 
-    <header class="container mx-auto">
+    <header class="container mx-auto max-w-7xl flex justify-between py-8 items-center">
+        
+        <figure>
+            <img
+            class="max-w-[150px]"
+            src="assets/img/logo.svg"
+            alt="Logo da Infowebeti">
+        </figure>
 
         <nav>
 
-            <figure>
-                <img src="img/logo.svg" alt="Logo da Infowebeti">
-            </figure>
-
-            <menu>
+            <menu class="flex gap-8 text-gray-500 items-center">
                 <li>
                     <a
                     href="#sobre">
@@ -45,13 +52,7 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="#documentos">
-                        Documentos
-                    </a>
-                </li>
-                
-                <button> Button </button>
+                <button class="bg-black text-white p-3 rounded-lg"> Documentos </button>
 
             </menu>
 
@@ -59,78 +60,96 @@
 
     </header>
 
-    <main class="container mx-auto">
+    <main class="container max-w-7xl mx-auto">
         
         <!-- HERO -->
-        <section class="p-10 bg-gray-100 rounded-sm">
-            <h1>
+        <section class="p-20 bg-gray-100 rounded-lg max-w-7xl flex flex-col items-center text-center">
+            <h1 class="text-5xl max-w-140 font-bold">
                 Depois de muita espera, ela finalmente chegou!
             </h1>
 
-            <p>
+            <p class="my-10 max-w-140 text-gray-500">
                 O formulário para aquisição da camisa está oficialmente aberto! Com um design original e dois modelos únicos, você vai poder mostrar todo o seu orgulho de fazer parte dessa turma incrível!
             </p>
             
-            <div class="">
-                <a href="">Ser feliz agora</a>
-                <a href="">Ficar triste</a>
+            <div class="flex justify-center gap-4">
+                <a 
+                href="#"
+                class="bg-sky-700 text-white py-2 px-4 rounded-sm">Ser feliz agora</a>
+                <a 
+                href="#"
+                class="bg-sky-700 text-white py-2 px-4 rounded-sm">Ficar triste</a>
             </div>
         </section>
 
         <!-- LOGOS -->
-        <section>
-            <ul class="flex">
+        <section class="my-13">
+            <ul class="flex gap-20 justify-between">
                 <li>
-                    <img src="img/logo-1.jpg" alt="">
+                    <img src="assets/img/Brand Icon-2.svg" alt="">
+                </li>
+
+                <li>
+                    <img src="assets/img/Brand Icon-1.svg" alt="">
                 </li>
                 
                 <li>
-                    <img src="img/logo-2.jpg" alt="">
+                    <img src="assets/img/Brand Icon-6.svg" alt="">
                 </li>
                 
                 <li>
-                    <img src="img/logo-3.jpg" alt="">
+                    <img src="assets/img/Brand Icon-5.svg" alt="">
                 </li>
 
                 <li>
-                    <img src="img/logo-4.jpg" alt="">
+                    <img src="assets/img/Brand Icon-4.svg" alt="">
                 </li>
 
                 <li>
-                    <img src="img/logo-5.jpg" alt="">
+                    <img src="assets/img/Brand Icon-3.svg" alt="">
                 </li>
 
                 <li>
-                    <img src="img/logo-6.jpg" alt="">
+                    <img src="assets/img/Brand Icon-6.svg" alt="">
                 </li>
 
-                <li>
-                    <img src="img/logo-7.jpg" alt="">
-                </li>
 
             </ul>
         </section>
 
         <!-- DESTAQUES -->
-        <section>
-            <div>
-                <strong>Ela é bonita</strong>
-                <span>Além de linda, ela é a mais top.</span>
+        <section class="flex gap-20 justify-between mb-10 mx-auto">
+
+            <div class="flex gap-4 items-baseline text-gray-600">
+                <i class="fa-solid fa-chevron-right text-sm"></i>
+                <div>
+                    <strong>Ela é bonita</strong>
+                    <p class="mt-2">Além de linda, ela é a mais top.</p>
+                </div>
             </div>
 
-            <div>
-                <strong>O azul destaque</strong>
-                <span>O azul royal ficou para trás. Contemple o novo azul esmeralda.</span>
+            <div class="flex gap-4 items-baseline text-gray-600">
+                <i class="fa-solid fa-chevron-right text-sm"></i>
+                <div>
+                    <strong>A cor do destaque</strong>
+                    <p class="mt-2">O azul royal ficou para trás.</p>
+                </div>
             </div>
 
-            <div>
-                <strong>Webeti</strong>
-                <span>O nosso mascote é um gênio de informática.</span>
+            <div class="flex gap-4 items-baseline text-gray-600">
+                <i class="fa-solid fa-chevron-right text-sm"></i>
+                <div>
+                    <strong>Webeti</strong>
+                    <p class="mt-2">O nosso mascote é um gênio de informática.</p>
+                </div>
             </div>
         </section>
 
         <!-- MOCKUP -->
-        <figure><img src="img/mockup.png" alt=""></figure>
+        <figure><img
+            class="w-full"
+            src="assets/img/mockup.png"
+            alt="Imagem destaque da camiseta da turma"></figure>
 
         <h2> Alunos que já compraram.</h2>
         <p> Junte aos milhares de alunos de info que já estão vestindo a nossa camiseta linda e maravilhosa. </p>
@@ -139,12 +158,12 @@
         <section class="grid grid-cols-3 gap-4 text-center my-10">
 
             <div>
-                <h3 class="text-5xl">234+</h3>
+                <h3 class="text-5xl"> 234+ </h3>
                 <span>Alunos felizes</span>
             </div>
 
             <div>
-                <h3 class="text-5xl">38,903+</h3>
+                <h3 class="text-5xl"> 38,903+ </h3>
                 <span> Alunos adquirindo agora </span>
             </div>
 
