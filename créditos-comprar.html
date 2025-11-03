@@ -32,11 +32,10 @@
 
     </header>
 
-    <main class="flex h-204">
+    <main class="flex h-240 mb-47.75">
         
         <!-- LADO ESQUERDO -->
-        
-        <section class="w-66 bg-white border-r-1 border-stone-300 w-77.5">
+        <section class="min-w-66 bg-white border-r-1 border-stone-300">
             
             <h3 class="font-bold text-[24px] text-center mt-8 mb-9.5 text-stone-600"> Canal do Cliente </h3>
             
@@ -44,7 +43,7 @@
                 
                 <li class="mb-2">
                     <a
-                    href="#"
+                    href="index.html"
                     class="flex gap-2 hover:text-sky-800">
                     <img
                     class="text-sky-800"
@@ -106,7 +105,7 @@
         <!-- LADO DIREITO -->
 
         <section class="ml-8">
-            <ul class="flex text-sm gap-2 mt-10 text-stone-600 mb-5">
+            <ul class="flex text-sm gap-2 mt-10 text-zinc-700 mb-5">
 
                 <li> <a href="#">Loja de Projetos</a></li>
                 <li>></li>
@@ -116,76 +115,125 @@
 
             </ul>
 
-            <h1 class="text-2xl font-semibold mb-2">Compra de pontos base</h1>
+            <h1 class="text-2xl font-semibold mb-4">Compra de pontos base</h1>
 
+            <hr class="w-310 mb-8 border-stone-300">
+
+            <section class="flex mb-8">
                 <hr class="border-stone-300 mb-8">
 
-                <div class="flex gap-8">
+                <div class="flex flex-col gap-8 bg-zinc-100 w-146 p-6 mr-8">
 
-                    <div class="bg-stone-100 w-">
-                    <h3>Limite mensal</h3>
-                    <p>Confira a quantidade de pontos disponível para compra</p>
+                    <div class="mb-1">
+                        <h3 class="font-bold text-xl mb-4">Limite mensal</h3>
+                        <p class="mb-4">Confira a quantidade de pontos disponível para compra</p>
+                        <img 
+                        class="w-full h-2"
+                        src="assets/img/barra-de-progresso.png" alt="">
                     </div>
 
-                    <div class="barra"></div>
-
-                    <div class="">
-                        <div class="">
-                            <span>Comprado esse mês</span>
-                            <strong>100 créditos</strong>
+                    <div class="flex justify-between mt-[-16px]">
+                        <div class="flex flex-col">
+                            <span class="text-sm text-zinc-500">Comprado esse mês</span>
+                            <strong class="text-xs">100 créditos</strong>
                         </div>
-                        <div class="">
-                            <span>Seu limite mensal</span>
-                            <strong>2.000 créditos</strong>
+
+                        <div class="flex flex-col">
+                            <span class="text-sm text-zinc-500">Seu limite mensal</span>
+                            <strong class="text-xs self-end">2.000 créditos</strong>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="">
-                    <h3>Informações</h3>
+                <div class="bg-stone-100 w-102 p-6">
+                    <h3 class="font-semibold text-lg mb-4">Informações</h3>
 
                     <ul>
-                        <li><span>Valor mínimo</span><strong>100 créditos</strong></li>
-                        <li><span>Validade</span><strong>24 meses</strong></li>
-                        <li><span>Limite de compra mensal </span><strong>2.000 créditos</strong></li>
+                        <li class="flex items-center gap-1 mb-4">
+                            <img src="assets/vectors/card.svg" 
+                            class="mr-1"
+                            alt="">
+                            <span class="text-sm">Valor mínimo de </span> <strong>100 créditos</strong>
+                        </li>
+
+                        <li class="flex items-center gap-1 mb-4">
+                            <img src="assets/vectors/calendar.svg" 
+                            class="mr-1"
+                            alt="">
+                            <span class="text-sm">Validade</span><strong>24 meses</strong></li>
+
+                        <li class="flex items-center gap-1">
+                            <img src="assets/vectors/money.svg" 
+                            class="mr-1"
+                            alt="">
+                            <span class="text-sm">Limite de compra mensal </span><strong>2.000 créditos</strong>
+                        </li>
                     </ul>                
                 </div>
+            
+            </section>
 
-            <div class="">
-                <div class="">
-                    <h3>Quantidade de créditos para compra</h3>
-                    <div>
-                        <button></button>
-                        <span>100</span>
-                        <button></button>
+            <div class="bg-zinc-100 w-256 p-6 flex gap-35 mb-20">
+
+                <div class="text-center">
+
+                    <h3 class="text-xl mb-8 font-semibold">Quantidade de créditos para compra</h3>
+
+                    <div class="w-88 flex gap-17 justify-center mb-5">
+
+                        <button class="border rounded-full h-10 w-10 text-sky-800">-</button>
+                        <p class="text-4xl font-bold">100</p>
+                        <button class="border rounded-full h-10 w-10 text-sky-800">+</button>
+
                     </div>
-                    <span>Digite o valor aproximado</span>
+
+                    <span class="border-t relative p-2 border-stone-300">Digite o valor aproximado</span>
+
                 </div>
-                <div class="">
-                    <h3>Total em reais</h3>
-                    <span>R$20.000,00</span>
+
+                <div>
+                    <h3 class="text-xl mb-8">Total em reais</h3>
+                    <span class="text-3xl font-bold">R$20.000,00</span>
                 </div>
+
             </div>
 
             <section>
-                <h3>Mais informações sobre o produto</h3>
-                <hr>
-                <p>
-                    <strong>ATENÇÃO</strong>: A transferência dos pontos comprados para programas parceiros (Milhas) depende da elegibilidade do seu cartão de crédito. Consulte os cartões elegíveis na página do produto a partir do menu Viagens - Programas Parceiros.
+                <div class="flex items-center gap-3 mb-2.5">
+                    <h3 class="text-lg font-semibold">Mais informações sobre o produto</h3>
+                    <i class="fa-solid fa-chevron-down text-xs text-sky-800"></i>
+                </div>
+
+                <hr class="mb-2.5 border-stone-300">
+
+                <p class="max-w-198.5 text-stone-600 font-light">
+                    <strong class="text-stone-700 font-bold">ATENÇÃO</strong>: A transferência dos pontos comprados para programas parceiros (Milhas) depende da elegibilidade do seu cartão de crédito. Consulte os cartões elegíveis na página do produto a partir do menu Viagens - Programas Parceiros.
                 </p>
             </section>
             
-            <footer>
-                <div class="">
-                    <a href="#">Voltar</a>
-                </div>
-                <div class="">
-                    <a href="#">Adicionar ao carrinho</a>
-                    <a href="#">Continuar</a>
-                </div>
-            </footer>
         </section>
+        
     </main>
+
+    <footer
+    class="flex w-full border-t-1 justify-between border-stone-300 top-250 absolute pt-7">
+
+    
+        <button class="ml-90 text-sky-800">
+            Voltar
+        </button>
+
+        <ul class="flex gap-3 mr-10">
+            <li class="border border-sky-700 text-sky-700 py-3 px-11 rounded-lg">
+                Adicionar ao carrinho
+            </li>
+            <li class="border bg-sky-700 text-white content-center py-3 px-11 rounded-lg">
+                Continuar
+                <i class="fa-solid fa-arrow-right"></i>
+            </li>
+        </ul>
+
+    </footer>
 
 </body>
