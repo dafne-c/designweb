@@ -10,100 +10,190 @@
     <script src="https://kit.fontawesome.com/f3e3dffc8c.js" crossorigin="anonymous"></script>
     <title> Dashboard </title>
 </head>
-<body
-class="font-[Sora]">
+
+<body class="font-[Sora]">
     
-    <main class="ml-10">
+    <header class="flex justify-between px-8 py-4 bg-stone-100 border-b border-stone-300">
+
+        <img src="assets/vectors/logo-colorida.svg" alt="">
+        <div class="flex gap-2">
+
         <img
-        class="mt-10 mb-10"
-        src="assets/img/banner.png" 
+        class="w-8 h-8"
+        src="assets/img/john-doe.png"
         alt="">
 
-        <section>
-            <h3
-            class="font-bold mb-6 text-lg">Compre pontos e distribua como quiser</h3>
+        <span>
+            <p class="text-xs font-bold"> John Doe </p>
+            <p class="text-xs text-stone-500"> Agência Web </p>
+        </span>
 
-            <div
-            class="grid grid-cols-3 gap-8 mr-54 max-w-256">
-            
-                <div
-                class="p-6 border rounded-2xl border-stone-300 max-w-80">
+        </div>
 
-                    <img 
-                    class="mb-6"
-                    src="assets/img/design-de-app.png" 
-                    alt="">
-                    <p
-                    class="text-sm text-stone-500 mb-10">
-                        Desenvolvimento, consultoria ou UX/UI para seus projetos decolarem.
-                    </p>
+    </header>
 
-                    <div
-                    class="flex justify-between items-center">
-                        <p class="font-bold text-lg"> Comprar créditos </p> 
-                        <i class="fa-solid fa-chevron-right"></i> 
-                    </div>
+    <main class="flex h-204">
 
-                    <p class="text-stone-600 text-sm">
-                        5 créditos por R$10.000,00
-                    </p>
-                </div>
+        <!-- LADO ESQUERDO -->
 
-                <div
-                class="p-6 border rounded-2xl border-stone-300 max-w-80">
+        <section class="w-66 bg-white border-r-1 border-stone-300 mr-8">
 
-                    <img 
-                    class="mb-6"
-                    src="assets/img/sistemas-pdv.png" 
-                    alt="">
-                    <p
-                    class="text-sm text-stone-500 mb-5">
-                        Desenvolvimento de projeto de ponta a ponta, com nível de complexidade média com super desconto.
-                    </p>
+            <h3 class="font-bold text-[24px] text-center mt-8 mb-9.5 text-stone-600"> Canal do Cliente </h3>
 
-                    <div
-                    class="flex justify-between items-center">
-                        <p class="font-bold text-lg"> Comprar créditos </p> 
-                        <i class="fa-solid fa-chevron-right"></i> 
-                    </div>
+            <ul class="text-stone-500 ml-8">
 
-                    <p class="text-stone-600 text-sm">
-                        21 créditos por R$120.000,00
-                    </p>
-                </div>
+                <li class="mb-2">
+                    <a
+                    href="#"
+                    class="flex gap-2 hover:text-sky-800">
+                        <img
+                        class="text-sky-800"
+                        src="assets/vectors/loja-de-projetos.svg" alt="">
+                        <p class="font-semibold"> Loja de projetos </p>
+                    </a>
+                </li>
 
-                <div
-                class="p-6 border rounded-2xl border-stone-300 max-w-80">
+                <li class="ml-8 mb-2">
+                    <a
+                    href="#"
+                    class="hover:text-sky-800 hover:font-semibold">
+                        <p> Dashboard </p>
+                    </a>
+                </li>
 
-                    <img 
-                    class="mb-6"
-                    src="assets/img/sites-wordpress.png" 
-                    alt="">
-                    <p
-                    class="text-sm text-stone-500 mb-10">
-                        Descontos cumulativos para projetos em Wordpress para 2025.
-                    </p>
+                <li class="ml-8">
+                    <a
+                    href="#"
+                    class="hover:text-sky-800 hover:font-semibold">
+                        <p> Concluídos </p>
+                    </a>
+                </li>
 
-                    <div
-                    class="flex justify-between items-center">
-                        <p class="font-bold text-lg"> Comprar créditos </p> 
-                        <i class="fa-solid fa-chevron-right"></i> 
-                    </div>
+            </ul>
 
-                    <p class="text-stone-600 text-sm">
-                        21 créditos por R$12.000,00
-                    </p>
-                </div>
-            
-            </div>
+            <ul class="text-stone-500 ml-8 mt-11.5">
+                <li>
+                    <a
+                    href="#"
+                    class="flex gap-2 mb-11.5 hover:text-sky-800 hover:font-semibold">
+                        <img
+                        class="text-sky-800"
+                        src="assets/vectors/gestão-de-projetos.svg" alt="">
+                        <p>Gestão de projetos</p>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="text-stone-500 ml-8">
+                <li>
+                    <a
+                    class="flex gap-2 hover:text-sky-800 hover:font-semibold"
+                    href="#">
+                        <img
+                        class="text-sky-800"
+                        src="assets/vectors/campanhas.svg" alt="">
+                        <p> Campanhas </p>
+                    </a>
+                </li>
+            </ul>
         </section>
+
+        <!-- LADO DIREITO -->
+         
+        <section>
+
+            <img
+            class="mt-10 mb-10"
+            src="assets/img/banner.png" 
+            alt="">
+
+            <section>
+                <h3
+                class="font-bold mb-6 text-lg">Compre pontos e distribua como quiser</h3>
+
+                <div
+                class="grid grid-cols-3 gap-8 mr-54 max-w-256">
+                
+                    <div
+                    class="p-6 border rounded-2xl border-stone-300 max-w-80">
+
+                        <img 
+                        class="mb-6"
+                        src="assets/img/design-de-app.png" 
+                        alt="">
+                        <p
+                        class="text-sm text-stone-500 mb-10">
+                            Desenvolvimento, consultoria ou UX/UI para seus projetos decolarem.
+                        </p>
+
+                        <div
+                        class="flex justify-between items-center">
+                            <p class="font-bold text-lg"> Comprar créditos </p> 
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>
+
+                        <p class="text-stone-600 text-sm">
+                            5 créditos por R$10.000,00
+                        </p>
+                    </div>
+
+                    <div
+                    class="p-6 border rounded-2xl border-stone-300 max-w-80">
+
+                        <img 
+                        class="mb-6"
+                        src="assets/img/sistemas-pdv.png" 
+                        alt="">
+                        <p
+                        class="text-sm text-stone-500 mb-5">
+                            Desenvolvimento de projeto de ponta a ponta, com nível de complexidade média com super desconto.
+                        </p>
+
+                        <div
+                        class="flex justify-between items-center">
+                            <p class="font-bold text-lg"> Comprar créditos </p> 
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>
+
+                        <p class="text-stone-600 text-sm">
+                            21 créditos por R$120.000,00
+                        </p>
+                    </div>
+
+                    <div
+                    class="p-6 border rounded-2xl border-stone-300 max-w-80">
+
+                        <img 
+                        class="mb-6"
+                        src="assets/img/sites-wordpress.png" 
+                        alt="">
+                        <p
+                        class="text-sm text-stone-500 mb-10">
+                            Descontos cumulativos para projetos em Wordpress para 2025.
+                        </p>
+
+                        <div
+                        class="flex justify-between items-center">
+                            <p class="font-bold text-lg"> Comprar créditos </p> 
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>
+
+                        <p class="text-stone-600 text-sm">
+                            21 créditos por R$12.000,00
+                        </p>
+                    </div>
+                
+                </div>
+            </section>
+        </section>
+
     </main>
 
     <footer
     class="flex justify-end w-full border-t-1 border-stone-300 absolute bottom-3 h-12">
         <img
         class="pt-3 pr-5 w-30"
-        src="assets/vectors/Vector.svg" 
+        src="assets/vectors/logo-preta.svg" 
         alt="">
     </footer>
 

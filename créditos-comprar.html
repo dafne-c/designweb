@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f3e3dffc8c.js" crossorigin="anonymous"></script>
+    <title> Dashboard </title>
+</head>
+
+<body class="font-[Sora]">
+    
+    <header class="flex justify-between px-8 py-4 bg-stone-100 border-b border-stone-300">
+
+        <img src="assets/vectors/logo-colorida.svg" alt="">
+        <div class="flex gap-2">
+        
+        <img
+        class="w-8 h-8"
+        src="assets/img/john-doe.png"
+        alt="">
+        
+        <span>
+            <p class="text-xs font-bold"> John Doe </p>
+            <p class="text-xs text-stone-500"> Agência Web </p>
+        </span>
+        
+        </div>
+
+    </header>
+
+    <main class="flex h-204">
+        
+        <!-- LADO ESQUERDO -->
+        
+        <section class="w-66 bg-white border-r-1 border-stone-300 w-77.5">
+            
+            <h3 class="font-bold text-[24px] text-center mt-8 mb-9.5 text-stone-600"> Canal do Cliente </h3>
+            
+            <ul class="text-stone-500 ml-8">
+                
+                <li class="mb-2">
+                    <a
+                    href="#"
+                    class="flex gap-2 hover:text-sky-800">
+                    <img
+                    class="text-sky-800"
+                    src="assets/vectors/loja-de-projetos.svg" alt="">
+                    <p class="font-semibold"> Loja de projetos </p>
+                    </a>
+                </li>
+            
+                <li class="ml-8 mb-2">
+                    <a
+                    href="#"
+                    class="hover:text-sky-800 hover:font-semibold">
+                    <p> Dashboard </p>
+                </a>
+                </li>
+        
+                <li class="ml-8">
+                    <a
+                    href="#"
+                    class="hover:text-sky-800 hover:font-semibold">
+                    <p> Concluídos </p>
+                    </a>
+                </li>
+
+            </ul>
+
+            <ul class="text-stone-500 ml-8 mt-11.5">
+
+                <li>
+                    <a
+                    href="#"
+                    class="flex gap-2 mb-11.5 hover:text-sky-800 hover:font-semibold">
+                    <img
+                    class="text-sky-800"
+                    src="assets/vectors/gestão-de-projetos.svg" alt="">
+                    <p>Gestão de projetos</p>
+                    </a>
+                </li>
+
+            </ul>
+
+            <ul class="text-stone-500 ml-8">
+                <li>
+                    <a
+                    class="flex gap-2 hover:text-sky-800 hover:font-semibold"
+                    href="#">
+
+                    <img
+                    class="text-sky-800"
+                    src="assets/vectors/campanhas.svg" alt="">
+                    <p> Campanhas </p>
+
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- LADO DIREITO -->
+
+        <section class="ml-8">
+            <ul class="flex text-sm gap-2 mt-10 text-stone-600 mb-5">
+
+                <li> <a href="#">Loja de Projetos</a></li>
+                <li>></li>
+                <li> <a href="#">Comprar Créditos</a></li>
+                <li>></li>
+                <li> <span>Compra de créditos</span> </li>
+
+            </ul>
+
+            <h1 class="text-2xl font-semibold mb-2">Compra de pontos base</h1>
+
+                <hr class="border-stone-300 mb-8">
+
+                <div class="flex gap-8">
+
+                    <div class="bg-stone-100 w-">
+                    <h3>Limite mensal</h3>
+                    <p>Confira a quantidade de pontos disponível para compra</p>
+                    </div>
+
+                    <div class="barra"></div>
+
+                    <div class="">
+                        <div class="">
+                            <span>Comprado esse mês</span>
+                            <strong>100 créditos</strong>
+                        </div>
+                        <div class="">
+                            <span>Seu limite mensal</span>
+                            <strong>2.000 créditos</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="">
+                    <h3>Informações</h3>
+
+                    <ul>
+                        <li><span>Valor mínimo</span><strong>100 créditos</strong></li>
+                        <li><span>Validade</span><strong>24 meses</strong></li>
+                        <li><span>Limite de compra mensal </span><strong>2.000 créditos</strong></li>
+                    </ul>                
+                </div>
+
+            <div class="">
+                <div class="">
+                    <h3>Quantidade de créditos para compra</h3>
+                    <div>
+                        <button></button>
+                        <span>100</span>
+                        <button></button>
+                    </div>
+                    <span>Digite o valor aproximado</span>
+                </div>
+                <div class="">
+                    <h3>Total em reais</h3>
+                    <span>R$20.000,00</span>
+                </div>
+            </div>
+
+            <section>
+                <h3>Mais informações sobre o produto</h3>
+                <hr>
+                <p>
+                    <strong>ATENÇÃO</strong>: A transferência dos pontos comprados para programas parceiros (Milhas) depende da elegibilidade do seu cartão de crédito. Consulte os cartões elegíveis na página do produto a partir do menu Viagens - Programas Parceiros.
+                </p>
+            </section>
+            
+            <footer>
+                <div class="">
+                    <a href="#">Voltar</a>
+                </div>
+                <div class="">
+                    <a href="#">Adicionar ao carrinho</a>
+                    <a href="#">Continuar</a>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+</body>
