@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title> Landing Page - Versão 1.0 </title>
   </head>
   <body class="font-[Inter]">
@@ -52,7 +54,7 @@
                     </a>
                 </li>
 
-                <button class="bg-black text-white p-3 rounded-lg"> Documentos </button>
+                <button class="btn bg-black text-white font-light rounded-lg py-5"> Documentos </button>
 
             </menu>
 
@@ -63,25 +65,25 @@
     <main class="container max-w-7xl mx-auto">
         
         <!-- HERO -->
-        <section class="p-20 bg-gray-100 rounded-lg max-w-7xl flex flex-col items-center text-center mb-16">
-            <h1 class="text-5xl max-w-140 font-bold">
-                Depois de muita espera, ela finalmente chegou!
-            </h1>
-
-            <p class="my-10 max-w-140 text-gray-500">
-                O formulário para aquisição da camisa está oficialmente aberto! Com um design original e dois modelos únicos, você vai poder mostrar todo o seu orgulho de fazer parte dessa turma incrível!
-            </p>
-            
-            <div class="flex justify-center gap-8 items-center">
-                <a 
-                href="#"
-                class="bg-sky-700 text-white py-4 px-6 rounded-lg">Ser feliz agora</a>
-                <a 
-                href="#"
-                class="text-sky-700 border-1 border-sky-700 py-4 px-10 rounded-lg font-medium">Ficar triste</a>
+        <div class="hero bg-base-200 min-h-screen mb-10">
+            <div class="hero-content text-center">
+              <div class="max-w-2xl">
+                <h1 class="text-5xl font-bold">Depois de muita espera, ela finalmente chegou!</h1>
+                <p class="py-6">
+                    O formulário para aquisição da camisa está oficialmente aberto! Com um design original e dois modelos únicos, você vai poder mostrar todo o seu orgulho de fazer parte dessa turma incrível!
+                </p>
+                <div class="flex justify-center gap-8 items-center">
+                    <a 
+                    href="#"
+                    class="btn p-8 rounded-lg">Ser feliz agora</a>
+                    <a 
+                    href="#"
+                    class="btn btn-outline text-sky-700 border-sky-700 py-4 px-10 rounded-lg py-7.5">Ficar triste</a>
+                </div>
+              </div>
             </div>
-        </section>
-
+          </div>
+          
         <!-- LOGOS -->
         <section class="mb-16">
             <ul class="flex gap-20 justify-between">
