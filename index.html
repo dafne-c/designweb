@@ -1,201 +1,186 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/f3e3dffc8c.js" crossorigin="anonymous"></script>
-    <title> Dashboard </title>
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title> Landing Page - Versão 1.0 </title>
+  </head>
+  <body class="font-[Inter]">
 
-<body class="font-[Sora]">
-    
-    <header class="flex justify-between px-8 py-4 bg-stone-100 border-b border-stone-300">
+    <header class="container mx-auto max-w-7xl flex justify-between py-8 items-center">
+        
+        <figure>
+            <img
+            class="max-w-[150px]"
+            src="assets/img/logo.svg"
+            alt="Logo da Infowebeti">
+        </figure>
 
-        <img src="assets/vectors/logo-colorida.svg" alt="">
-        <div class="flex gap-2">
+        <nav>
 
-        <img
-        class="w-8 h-8"
-        src="assets/img/john-doe.png"
-        alt="">
+            <menu class="flex gap-8 text-gray-500 items-center">
+                <li>
+                    <a
+                    href="#sobre">
+                        Sobre
+                    </a>
+                </li>
 
-        <span>
-            <p class="text-xs font-bold"> John Doe </p>
-            <p class="text-xs text-stone-500"> Agência Web </p>
-        </span>
+                <li>
+                    <a
+                    href="#professores">
+                        Professores
+                    </a>
+                </li>
 
-        </div>
+                <li>
+                    <a
+                    href="#alunos">
+                        Alunos
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                    href="#projetos">
+                        Projetos
+                    </a>
+                </li>
+
+                <button class="bg-black text-white p-3 rounded-lg"> Documentos </button>
+
+            </menu>
+
+        </nav>
 
     </header>
 
-    <main class="flex h-204">
+    <main class="container max-w-7xl mx-auto">
+        
+        <!-- HERO -->
+        <section class="p-20 bg-gray-100 rounded-lg max-w-7xl flex flex-col items-center text-center mb-16">
+            <h1 class="text-5xl max-w-140 font-bold">
+                Depois de muita espera, ela finalmente chegou!
+            </h1>
 
-        <!-- LADO ESQUERDO -->
+            <p class="my-10 max-w-140 text-gray-500">
+                O formulário para aquisição da camisa está oficialmente aberto! Com um design original e dois modelos únicos, você vai poder mostrar todo o seu orgulho de fazer parte dessa turma incrível!
+            </p>
+            
+            <div class="flex justify-center gap-8 items-center">
+                <a 
+                href="#"
+                class="bg-sky-700 text-white py-4 px-6 rounded-lg">Ser feliz agora</a>
+                <a 
+                href="#"
+                class="text-sky-700 border-1 border-sky-700 py-4 px-10 rounded-lg font-medium">Ficar triste</a>
+            </div>
+        </section>
 
-        <section class="w-66 bg-white border-r-1 border-stone-300 mr-8">
-
-            <h3 class="font-bold text-[24px] text-center mt-8 mb-9.5 text-stone-600"> Canal do Cliente </h3>
-
-            <ul class="text-stone-500 ml-8">
-
-                <li class="mb-2">
-                    <a
-                    href="#"
-                    class="flex gap-2 hover:text-sky-800">
-                        <img
-                        class="text-sky-800"
-                        src="assets/vectors/loja-de-projetos.svg" alt="">
-                        <p class="font-semibold"> Loja de projetos </p>
-                    </a>
-                </li>
-
-                <li class="ml-8 mb-2">
-                    <a
-                    href="#"
-                    class="hover:text-sky-800 hover:font-semibold">
-                        <p> Dashboard </p>
-                    </a>
-                </li>
-
-                <li class="ml-8">
-                    <a
-                    href="#"
-                    class="hover:text-sky-800 hover:font-semibold">
-                        <p> Concluídos </p>
-                    </a>
-                </li>
-
-            </ul>
-
-            <ul class="text-stone-500 ml-8 mt-11.5">
+        <!-- LOGOS -->
+        <section class="mb-16">
+            <ul class="flex gap-20 justify-between">
                 <li>
-                    <a
-                    href="#"
-                    class="flex gap-2 mb-11.5 hover:text-sky-800 hover:font-semibold">
-                        <img
-                        class="text-sky-800"
-                        src="assets/vectors/gestão-de-projetos.svg" alt="">
-                        <p>Gestão de projetos</p>
-                    </a>
+                    <img src="assets/img/Brand Icon-2.svg" alt="">
                 </li>
-            </ul>
 
-            <ul class="text-stone-500 ml-8">
                 <li>
-                    <a
-                    class="flex gap-2 hover:text-sky-800 hover:font-semibold"
-                    href="#">
-                        <img
-                        class="text-sky-800"
-                        src="assets/vectors/campanhas.svg" alt="">
-                        <p> Campanhas </p>
-                    </a>
+                    <img src="assets/img/Brand Icon-1.svg" alt="">
                 </li>
+                
+                <li>
+                    <img src="assets/img/Brand Icon-6.svg" alt="">
+                </li>
+                
+                <li>
+                    <img src="assets/img/Brand Icon-5.svg" alt="">
+                </li>
+
+                <li>
+                    <img src="assets/img/Brand Icon-4.svg" alt="">
+                </li>
+
+                <li>
+                    <img src="assets/img/Brand Icon-3.svg" alt="">
+                </li>
+
+                <li>
+                    <img src="assets/img/Brand Icon.svg" alt="">
+                </li>
+
+
             </ul>
         </section>
 
-        <!-- LADO DIREITO -->
-         
-        <section>
+        <!-- DESTAQUES -->
+        <section class="mx-auto mb-16">
 
-            <img
-            class="mt-10 mb-10"
-            src="assets/img/banner.png" 
-            alt="">
+            <hr class="relative top-[98px] border-y-1 border-gray-300">
 
-            <section>
-                <h3
-                class="font-bold mb-6 text-lg">Compre pontos e distribua como quiser</h3>
+            <div class="flex gap-20 justify-between mb-10 relative">
 
-                <div
-                class="grid grid-cols-3 gap-8 mr-54 max-w-256">
-                
-                    <div
-                    class="p-6 border rounded-2xl border-stone-300 max-w-80">
-
-                        <img 
-                        class="mb-6"
-                        src="assets/img/design-de-app.png" 
-                        alt="">
-                        <p
-                        class="text-sm text-stone-500 mb-10">
-                            Desenvolvimento, consultoria ou UX/UI para seus projetos decolarem.
-                        </p>
-
-                        <div
-                        class="flex justify-between items-center">
-                            <p class="font-bold text-lg"> Comprar créditos </p> 
-                            <i class="fa-solid fa-chevron-right"></i> 
-                        </div>
-
-                        <p class="text-stone-600 text-sm">
-                            5 créditos por R$10.000,00
-                        </p>
+                <div class="flex gap-4 items-baseline text-gray-600 border-b-2 pb-10 border-gray-300 hover:border-black hover:text-black hover:cursor-pointer transition duration-300 ">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                    <div>
+                        <strong>Ela é bonita</strong>
+                        <p class="mt-2">Além de linda, ela é a mais top de todas.</p>
                     </div>
-
-                    <div
-                    class="p-6 border rounded-2xl border-stone-300 max-w-80">
-
-                        <img 
-                        class="mb-6"
-                        src="assets/img/sistemas-pdv.png" 
-                        alt="">
-                        <p
-                        class="text-sm text-stone-500 mb-5">
-                            Desenvolvimento de projeto de ponta a ponta, com nível de complexidade média com super desconto.
-                        </p>
-
-                        <div
-                        class="flex justify-between items-center">
-                            <p class="font-bold text-lg"> Comprar créditos </p> 
-                            <i class="fa-solid fa-chevron-right"></i> 
-                        </div>
-
-                        <p class="text-stone-600 text-sm">
-                            21 créditos por R$120.000,00
-                        </p>
-                    </div>
-
-                    <div
-                    class="p-6 border rounded-2xl border-stone-300 max-w-80">
-
-                        <img 
-                        class="mb-6"
-                        src="assets/img/sites-wordpress.png" 
-                        alt="">
-                        <p
-                        class="text-sm text-stone-500 mb-10">
-                            Descontos cumulativos para projetos em Wordpress para 2025.
-                        </p>
-
-                        <div
-                        class="flex justify-between items-center">
-                            <p class="font-bold text-lg"> Comprar créditos </p> 
-                            <i class="fa-solid fa-chevron-right"></i> 
-                        </div>
-
-                        <p class="text-stone-600 text-sm">
-                            21 créditos por R$12.000,00
-                        </p>
-                    </div>
-                
                 </div>
-            </section>
+
+                <div class="flex gap-4 items-baseline text-gray-600 border-b-2 pb-10 border-gray-300 hover:border-black hover:text-black hover:cursor-pointer transition duration-300 ">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                    <div>
+                        <strong>A cor do destaque</strong>
+                        <p class="mt-2">O azul royal ficou no passado.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-baseline text-gray-600 border-b-2 pb-10 border-gray-300 hover:border-black hover:text-black hover:cursor-pointer transition duration-300 ">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                    <div>
+                        <strong>Webeti</strong>
+                        <p class="mt-2">O nosso mascote é um gênio de informática.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- MOCKUP -->
+        <figure><img
+            class="w-full mb-16"
+            src="assets/img/mockup.png"
+            alt="Imagem destaque da camiseta da turma"></figure>
+
+        <h2 class="text-center text-5xl font-semibold mb-10"> Alunos que já compraram.</h2>
+        <p class="text-center text-gray-500 max-w-150 mx-auto tracking-wide mb-13"> Junte-se aos milhares de alunos de info que já estão vestindo a nossa camiseta linda e maravilhosa. </p>
+
+        <!-- MÉTRICAS -->
+        <section class="grid grid-cols-3 gap-4 text-center mb-20">
+
+            <div>
+                <h3 class="text-5xl font-semibold mb-1"> 234+ </h3>
+                <span class="text-gray-500">Alunos felizes</span>
+            </div>
+
+            <div>
+                <h3 class="text-5xl font-semibold mb-1"> 38,903+ </h3>
+                <span class="text-gray-500"> Alunos adquirindo agora </span>
+            </div>
+
+            <div>
+                <h3 class="text-5xl font-semibold mb-1"> 154+ </h3>
+                <span class="text-gray-500"> Alunos tristes </span>
+            </div>
+
         </section>
 
     </main>
 
-    <footer
-    class="flex justify-end w-full border-t-1 border-stone-300 absolute bottom-3 h-12">
-        <img
-        class="pt-3 pr-5 w-30"
-        src="assets/vectors/logo-preta.svg" 
-        alt="">
-    </footer>
-
-</body>
+  </body>
 </html>
