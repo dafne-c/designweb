@@ -1,79 +1,182 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br" 
+      x-data="{ 
+          tab: 'contato', 
+          dark: false 
+      }"
+      :data-theme="dark ? 'dracula' : 'winter'">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Semana 11</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Document</title>
 </head>
-<body>
+<body class="min-h-screen transition-colors">
 
-    <div x-data="{nome : 'Webeti'}">
-        <h1>
-            Olá, <span x-text="nome"></span>
-        </h1>
+    <nav class="navbar bg-base-100 shadow-lg px-8">
+        <div class="flex-1 font-bold text-xl">DevPortfolio</div>
+        
+        <div class="flex-none gap-2">
+        <!-- Botão HOME -->
+            <button 
+                @click="tab = 'home'" 
+                class="btn btn-sm btn-ghost"
+                :class="{ 'btn-active': tab === 'home' }">
+                Home
+            </button>
+        
+            <!-- Botão PROJETOS -->
+            <button 
+                @click="tab = 'projetos'" 
+                class="btn btn-sm btn-ghost"
+                :class="{ 'btn-active': tab === 'projetos' }">
+                Projetos
+            </button>
+
+            <button 
+                @click="tab = 'sobre'" 
+                class="btn btn-sm btn-ghost"
+                :class="{ 'btn-active': tab === 'sobre' }">
+                Sobre
+            </button>
+
+            <button
+                @click="tab = 'contato'"
+                class="btn btn-sm btn-ghost"
+                :class="{ 'btn-active': tab === 'contato' }">
+                Contato
+            </button>
+            
+            <!-- Dark Mode Toggle -->
+            <input type="checkbox" class="toggle" 
+                    x-model="dark" />
+        </div>
+    </nav>
+
+  
+
+<main class="p-10 max-w-5xl mx-auto">
+
+    <!-- SEÇÃO HOME -->
+    <div x-show="tab === 'home'" 
+         x-transition:enter.duration.500ms>
+         
+        <div class="hero min-h-[50vh] bg-base-200 rounded-box">
+            <div class="hero-content text-center">
+                <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">Olá, eu sou Dev</h1>
+                    <button @click="tab = 'contato'" 
+                            class="btn btn-primary mt-6">
+                        Fale Comigo
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    <!-- Outras seções (Projetos, Contato)... -->
     
-    <br><br>
 
-    <div x-data="{ aceso: false }">
-    <button @click="aceso = !aceso">
-        Interruptor
-    </button>
+    <div class="card bg-base-100 shadow-xl" x-data="{ modal: false }" x-show="tab === 'projetos'">
+        <div class="card-body">
+        <h2 class="card-title">Projeto X</h2>
+        <button @click="modal = true" class="btn btn-primary">Ver</button>
+        </div>
     
-    Luz: <span x-text="aceso ? '💡' : '🌑'"></span>
+        <!-- O MODAL -->
+        <div x-show="modal" 
+            class="fixed inset-0 bg-black/80 flex justify-center items-center z-50"
+            x-transition.opacity>
+            
+            <div @click.outside="modal = false" 
+                class="bg-base-100 p-8 rounded-lg">
+                <h3>Detalhes...</h3>
+                <button @click="modal = false" class="btn">X</button>
+            </div>
+        </div>
+    </div>
+  
+    <div x-show="tab === 'sobre'">
+
+        <div x-transition x-data="{ativo : 1}">
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="acc" @click="ativo = 1" checked />
+                <div class="collapse-title text-xl font-medium">Minha Experiência</div>
+                <div class="collapse-content"><p>Desenvolvedor Web Fullstack.</p></div>
+            </div>
+
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="acc" @click="ativo = 2" />
+                <div class="collapse-title text-xl font-medium">Formação</div>
+                <div class="collapse-content"><p>IFRN - Informática.</p></div>
+            </div>
+
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="acc" @click="ativo = 2" />
+                <div class="collapse-title text-xl font-medium">Certificados</div>
+                <div class="collapse-content"><p>SEMENTE</p></div>
+            </div>
+
+        </div>
     </div>
 
-    <br>
-    <br>
+    <div x-show="tab === 'contato'">
+        <div x-transition 
+            x-data="{ email: '', msg: '', enviado: false }" class="max-w-md mx-auto mt-8 bg-base-200 p-6 rounded-xl">
+        
+            <div class="form-control">
+                <label class="label">Email</label>
+                <input x-model="email" class="input input-bordered">
+            </div>
+            
+            <div class="form-control mt-4">
+                <label class="label">Mensagem</label>
+                <textarea x-model="msg" class="textarea textarea-bordered"></textarea>
+            </div>
 
-    <div x-data="{msg : ''}">
-        <input x-model="msg" placeholder="Digite algo!">
-        <p>Você digitou: <b x-text="msg"></b> </p>
+            <div class="mt-6">
+                <button @click="enviado = true; email=''; msg=''" 
+                        :disabled="!email.includes('@') || msg.length < 5"
+                        class="btn btn-primary w-full">Enviar</button>
+            </div>
+
+            <div x-show="enviado" x-transition class="alert alert-success mt-4 shadow-lg">
+                <span>Mensagem enviada com sucesso!</span>
+            </div>
+        </div>
     </div>
 
-    <br>
-    <br>
+        <!-- <div class="p-2 bg-base-200 mb-3">
+            <div x-data="{ expanded: false }" class="transition-all duration-300">
+                <button @click="expanded = ! expanded">Lorem ipsum dolor sit amet.</button>
+             
+                <p x-show="expanded" x-collapse>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam reiciendis dolore corrupti, in quas fugit, quaerat ab eius blanditiis illo suscipit, aut ratione similique cupiditate vel molestiae consectetur dignissimos magnam!
+                </p>
+            </div>
+        </div>
 
-    <div x-data="{ n1: 0, n2: 0 }">
-        <input x-model="n1" type="number">
-        +
-        <input x-model="n2" type="number">
-        <hr>
-        Resultado:
-        <span
-        x-text="parseInt(n1) + parseInt(n2)"
-        :class = "{
-            'text-red-500' : parseInt(n1) + parseInt(n2) > 10,
-            'text-blue-500' : parseInt(n1) + parseInt(n2) <= 10,
-        }"
-        ></span>
-    </div>
+        <div class="p-2 bg-base-200">
+            <div x-data="{ expanded: false }">
+                <button @click="expanded = ! expanded">.tema tis rolod muspi meroL</button>
 
+                <p x-show="expanded" x-collapse>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nihil nesciunt est, eaque molestiae aperiam doloremque id eveniet distinctio natus et architecto, modi cum ratione sapiente. Ipsam, eaque? Amet, ab.
+                </p>
+            </div>
+        </div> -->
+  
+</main>
+
+
+  
+  
 </body>
-</html> -->
-<!-- 1. O CÉREBRO (Estado Inicial) -->
-<div x-data="{ texto: '' }">
-
-    <!-- 2. A CONEXÃO (Input <-> Var) -->
-    <textarea x-model="texto"></textarea>
-  
-    <div>
-      <!-- 3. O FEEDBACK (Texto e Cor) -->
-      <span 
-        x-text="texto.length + '/20'"
-        :class="texto.length > 20 
-                ? 'text-red-600' 
-                : 'text-gray-400'">
-      </span>
-  
-      <!-- 4. O GUARDA (Bloqueio) -->
-      <button 
-        :disabled="texto.length === 0 || 
-                   texto.length > 20">
-        Tweetar
-      </button>
-    </div>
-  
-  </div>
+</html>
