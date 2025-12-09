@@ -51,56 +51,29 @@
         ></span>
     </div>
 
-
-
 </body>
 </html> -->
+<!-- 1. O CÉREBRO (Estado Inicial) -->
+<div x-data="{ texto: '' }">
 
-<!DOCTYPE html>
-<html lang="pt-br" data-theme="dark">
-<head>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet">
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-</head>
-
-<body class="min-h-screen p-10 flex flex-col items-center gap-8 bg-base-200">
-
-  <!-- ESTADO INICIAL: mensagem vazia -->
-  <div x-data="{ mensagem: '' }" class="w-full max-w-md">
-    
-    <!-- 1. O INPUT (Escreve) -->
-    <div class="form-control mb-8">
-      <label class="label">
-        <span class="label-text font-bold">Sua Mensagem:</span>
-      </label>
-      
-      <textarea 
-        x-model="mensagem" 
-        class="textarea textarea-primary textarea-lg w-full"
-        placeholder="Digite aqui..."></textarea>
-        
-      <div class="label">
-        <span class="label-text-alt">
-            Letras: <span x-text="mensagem.length"></span>
-        </span>
-      </div>
+    <!-- 2. A CONEXÃO (Input <-> Var) -->
+    <textarea x-model="texto"></textarea>
+  
+    <div>
+      <!-- 3. O FEEDBACK (Texto e Cor) -->
+      <span 
+        x-text="texto.length + '/20'"
+        :class="texto.length > 20 
+                ? 'text-red-600' 
+                : 'text-gray-400'">
+      </span>
+  
+      <!-- 4. O GUARDA (Bloqueio) -->
+      <button 
+        :disabled="texto.length === 0 || 
+                   texto.length > 20">
+        Tweetar
+      </button>
     </div>
-
-    <!-- 2. O RESULTADO (Lê) -->
-    <div class="card bg-base-100 shadow-xl border-2 border-primary">
-      <div class="card-body items-center text-center">
-        <h2 class="card-title text-2xl">Visualização</h2>
-        
-        <p x-show="mensagem.length === 0" class="text-gray-400 italic">
-            (Aguardando texto...)
-        </p>
-
-        <p x-text="mensagem" class="text-xl font-medium"></p>
-      </div>
-    </div>
-
+  
   </div>
-
-</body>
-</html>
