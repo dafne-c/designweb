@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div x-data="{tab : 'div_1'}">
+            <button 
+                @click="tab = 'div_1'" 
+                class="btn"
+                :class="{ 'btn-active': tab === 'div_1' }">
+                Div 1
+            </button>
+
+            <button 
+                @click="tab = 'div_2'" 
+                class="btn"
+                :class="{ 'btn-active': tab === 'div_2' }">
+                Div 2
+            </button>
+
+            <button 
+                @click="tab = 'div_3'" 
+                class="btn"
+                :class="{ 'btn-active': tab === 'div_3' }">
+                Div 3
+            </button>
+
+        <div
+        class="bg-red-400"
+        x-show="tab === 'div_1'"> La, la, la
+        </div>
+        <div
+        class="bg-blue-400"
+        x-show="tab === 'div_2'"> La, la, la </div>
+        <div
+        class="bg-pink-400"
+        x-show="tab === 'div_3'"> La, la, la </div>
+    </div>
+
+</body>
+</html>

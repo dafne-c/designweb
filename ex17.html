@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div x-data="{ modal: false }">
+        <button
+        class="btn" 
+        @click="modal = true">Abrir modal</button>
+
+        <div x-show="modal"
+        x-transition.opacity
+        class="fixed inset-0 bg-black/80 flex justify-center items-center z-50">
+
+            <div
+            class="relative bg-white p-6 rounded shadow"
+            @click.outside="modal = false">
+
+                <button
+                class="absolute top-2 right-2"
+                @click="modal = false">
+                    X
+                </button>
+                <p> Div centralizada com fundo escuro </p>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
