@@ -1,79 +1,43 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Semana 11</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-
-    <div x-data="{nome : 'Webeti'}">
-        <h1>
-            Olá, <span x-text="nome"></span>
-        </h1>
-    </div>
     
-    <br><br>
 
-    <div x-data="{ aceso: false }">
-    <button @click="aceso = !aceso">
-        Interruptor
-    </button>
+<!-- <div x-data="{ tags: ['HTML'], novo: '' }">
+    <input x-model="novo" @keydown.enter="tags.push(novo); novo=''">
     
-    Luz: <span x-text="aceso ? '💡' : '🌑'"></span>
-    </div>
+    <template x-for="tag in tags">
+        <span class="badge">
+            <span x-text="tag"></span>
+            <button class="btn" @click="tags = tags.filter(t => t !== tag)">X</button>
+        </span>
+    </template>
+</div> -->
 
-    <br>
-    <br>
+<div x-data="{ tags: ['HTML'], new: '' }">
 
-    <div x-data="{msg : ''}">
-        <input x-model="msg" placeholder="Digite algo!">
-        <p>Você digitou: <b x-text="msg"></b> </p>
-    </div>
+    <input x-model="new" @keydown.enter="tags.push(new); new=''">
 
-    <br>
-    <br>
+    <template x-for="tag in tags">
 
-    <div x-data="{ n1: 0, n2: 0 }">
-        <input x-model="n1" type="number">
-        +
-        <input x-model="n2" type="number">
-        <hr>
-        Resultado:
-        <span
-        x-text="parseInt(n1) + parseInt(n2)"
-        :class = "{
-            'text-red-500' : parseInt(n1) + parseInt(n2) > 10,
-            'text-blue-500' : parseInt(n1) + parseInt(n2) <= 10,
-        }"
-        ></span>
-    </div>
+        <span class="badge"> 
+
+            <span x-text="tag"></span>
+            <button @click="tags = tags.filter(t => t !== tag)">X</button>
+
+        </span>
+
+    </template>
+
+</div>
+
 
 </body>
-</html> -->
-<!-- 1. O CÉREBRO (Estado Inicial) -->
-<div x-data="{ texto: '' }">
-
-    <!-- 2. A CONEXÃO (Input <-> Var) -->
-    <textarea x-model="texto"></textarea>
-  
-    <div>
-      <!-- 3. O FEEDBACK (Texto e Cor) -->
-      <span 
-        x-text="texto.length + '/20'"
-        :class="texto.length > 20 
-                ? 'text-red-600' 
-                : 'text-gray-400'">
-      </span>
-  
-      <!-- 4. O GUARDA (Bloqueio) -->
-      <button 
-        :disabled="texto.length === 0 || 
-                   texto.length > 20">
-        Tweetar
-      </button>
-    </div>
-  
-  </div>
+</html>
