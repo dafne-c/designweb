@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <title>Task Manager</title>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen" x-data>
+
+  <div class="bg-white p-6 rounded-xl shadow-lg w-96">
+
+    <div class="flex justify-between items-center mb-4">
+
+      <h1 class="text-xl font-bold"> Minhas Tarefas </h1>
+
+      <span class="text-sm bg-pink-100 text-pink-700 px-2 py-1 rounded-full" x-text="$store.tarefas.contagem + ' pendentes'"></span>
+
+    </div>
+
+    <div x-data="{ text: '' }" class="flex gap-2 mb-4">
+
+      <input type="text" placeholder="Nova tarefa..." class="flex-1 border rounded px-3 py-2" x-model="text" @keydown.enter="$store.tarefas.add(text); text=''">
+
+      <button class="bg-pink-500 text-white px-4 rounded-full" @click="$store.tarefas.add(text); text=''"> + </button>
+
+    </div>
+
+    <div class="flex gap-2 mb-4">
+
+      <button class="px-3 py-1 rounded-lg" :class="$store.tarefas.filter === 'all' ? 'bg-black text-white' : 'bg-gray-200'" @click="$store.tarefas.filter = 'all'"> Todas </button>
+
+      <button class="px-3 py-1 rounded-lg" :class="$store.tarefas.filter === 'pending' ? 'bg-black text-white' : 'bg-gray-200'" @click="$store.tarefas.filter = 'pending'"> Pendentes </button>
+
+      <button class="px-3 py-1 rounded-lg" :class="$store.tarefas.filter === 'done' ? 'bg-black text-white' : 'bg-gray-200'" @click="$store.tarefas.filter = 'done'"> Feitas </button>
+
+    </div>
+
+    <ul class="space-y-2">
+      <template x-for="task in $store.tarefas.filtered" :key="task.text">
+        <li class="flex items-center justify-between border rounded p-2">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" x-model="task.done">
+              <span
+                x-text="task.text"
+                :class="task.done ? 'line-through text-gray-400' : ''">
+              </span>
+            </div>
+          
+            <button
+              class="text-red-500 hover:text-red-700 font-bold"
+              @click="$store.tarefas.remove(task)">
+              ✕
+            </button>
+          </li>
+          
+
+      </template>
+
+    </ul>
+
+  </div>
+
+
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.store('tarefas', {
+        items: [
+          { text: 'Aprender Alpine.js', done: false },
+          { text: 'Criar Store Global', done: false },
+          { text: 'Finalizar Projeto', done: false },
+        ],
+
+        filter: 'all',
+
+        get filtered() {
+          if (this.filter === 'done') {
+            return this.items.filter(item => item.done)
+          }
+          if (this.filter === 'pending') {
+            return this.items.filter(item => !item.done)
+          }
+          return this.items
+        },
+
+        add(text) {
+          if (!text.trim()) return
+          this.items.push({ text, done: false })
+        },
+
+        get contagem() {
+          return this.items.filter(i => !i.done).length
+        },
+
+        remove(task) {
+        this.items = this.items.filter(item => item !== task)
+        }
+
+      })
+    })
+  </script>
+
+</body>
+</html>
